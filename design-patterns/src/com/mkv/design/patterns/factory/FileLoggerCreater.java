@@ -1,0 +1,17 @@
+/*
+ * 	Define an interface for creating an object, 
+ * 	but let subclasses decide which class to instantiate. 
+ * 	Factory Method lets a class defer instantiation to subclasses
+ */
+
+package com.mkv.design.patterns.factory;
+
+public class FileLoggerCreater extends LoggerCreator {
+
+	@Override
+	public ILogger createLogger() {
+		
+		return new FileLoggerImpl();
+	}
+
+}
